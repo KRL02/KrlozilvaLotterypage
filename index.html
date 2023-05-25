@@ -69,16 +69,16 @@
 
               <div class="flex justify-between font-semibold text-sm pb-2 pb-2">
 
-                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">01</button>
-                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">02</button>
-                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">03</button>
-                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">04</button>
-                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">05</button>
-                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">06</button>
-                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">07</button>
-                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">08</button>
-                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">09</button>
-                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">10</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded" onclick="toggleSeleccion(1)" id="btn1" class="btn">01</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded" onclick="toggleSeleccion(2)" id="btn2" class="btn">02</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded" onclick="toggleSeleccion(3)" id="btn3" class="btn">03</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded" onclick="toggleSeleccion(4)" id="btn4" class="btn">04</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded" onclick="toggleSeleccion(5)" id="btn5" class="btn">05</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded" onclick="toggleSeleccion(6)" id="btn6" class="btn">06</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded" onclick="toggleSeleccion(7)" id="btn7" class="btn">07</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded" onclick="toggleSeleccion(8)" id="btn8" class="btn">08</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded" onclick="toggleSeleccion(9)" id="btn9" class="btn">09</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded" onclick="toggleSeleccion(10)" id="btn10" class="btn">10</button>
 
               </div>
 
@@ -214,7 +214,12 @@
                 <span class="px-3 border rounded-sm w-14 h-5 flex items-center justify-center border-black text-black-500 shadow-md">DISPONIBLE</span>
                 <span class="px-3 border rounded-sm w-14 h-5 flex items-center justify-center border-green-500 text-green-500 shadow-md">Vendido</span>
                 
+              
+
+               
          </div>
+
+         <label id="numerosSeleccionados" class="block mt-4"></label>
 
 
 
@@ -289,6 +294,27 @@
         </div>
 
     </div>
+
+    <script>
+      function toggleSeleccion(numero) {
+        const btn = document.getElementById("btn" + numero);
+        const label = document.getElementById("numerosSeleccionados");
+  
+        btn.classList.toggle("bg-green-500");
+  
+        // Obtener los botones seleccionados
+        const botonesSeleccionados = document.getElementsByClassName("bg-green-500");
+        let numerosSeleccionados = "";
+  
+        // Construir la lista de números seleccionados
+        for (let i = 0; i < botonesSeleccionados.length; i++) {
+          numerosSeleccionados += botonesSeleccionados[i].textContent + ", ";
+        }
+  
+        // Actualizar el contenido del label
+        label.textContent = "Números seleccionados: " + numerosSeleccionados;
+      }
+    </script>
 
 
     

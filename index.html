@@ -1,100 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <title>Formulario con Tailwind CSS</title>
-  <script src="https://cdn.jsdelivr.net/npm/whatsapp-web.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Document</title>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      document.getElementById("formulario").addEventListener("submit", function(event) {
-        event.preventDefault(); // Evitar que el formulario se envíe automáticamente
+    <script src="https://cdn.jsdelivr.net/npm/whatsapp-web.js"></script>
 
-        // Obtener los valores de los campos
-        var nombre = document.getElementById("nombre").value;
-        var apellidos = document.getElementById("apellidos").value;
-        var whatsapp = document.getElementById("whatsapp").value;
-        var estado = document.getElementById("estado").value;
-
-        // Construir el mensaje para enviar por WhatsApp
-        var mensaje = "¡Hola! Mi nombre es " + nombre + " " + apellidos + ". Estoy interesado/a y mi estado es " + estado + ".";
-
-        // Enviar mensaje por WhatsApp
-        var link = "https://api.whatsapp.com/send?phone=" + 523531202623 + "&text=" + encodeURIComponent(mensaje);
-        window.open(link, "_blank");
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById("formulario").addEventListener("submit", function(event) {
+          event.preventDefault(); // Evitar que el formulario se envíe automáticamente
+  
+          // Obtener los valores de los campos
+          var nombre = document.getElementById("nombre").value;
+          var apellidos = document.getElementById("apellidos").value;
+          var whatsapp = document.getElementById("whatsapp").value;
+          var estado = document.getElementById("estado").value;
+  
+          // Construir el mensaje para enviar por WhatsApp
+          var mensaje = "¡Hola! Mi nombre es " + nombre + " " + apellidos + ". Estoy interesado/a y mi estado es " + estado + ".";
+  
+          // Enviar mensaje por WhatsApp
+          var link = "https://api.whatsapp.com/send?phone=" + 523531202623 + "&text=" + encodeURIComponent(mensaje);
+          window.open(link, "_blank");
+        });
       });
-    });
-  </script>
-</head>
+    </script>
 
+</head>
 <body>
 
-  <div class="container mx-auto py-8">
-    <form class="max-w-md mx-auto" id="formulario">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div class="mb-4">
-          <label for="nombre" class="block text-gray-700 text-sm font-bold mb-2">Nombre:</label>
-          <input type="text" id="nombre" name="nombre" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500" placeholder="Ingrese su nombre" required>
+  
+  <header class="text-gray-600 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg>
+        <span class="ml-3 text-xl font-black ">KrloZilva Lottery</span>
+      </a>
+      <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+        <a class="mr-5 hover:text-gray-900">Inicio</a>
+        <a class="mr-5 hover:text-gray-900">Rifas</a>
+        <a class="mr-5 hover:text-gray-900">Reglas</a>
+        <a class="mr-5 hover:text-gray-900">Ganadores</a>
+      </nav>
+      <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Button
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+
+  <section class="text-gray-600 body-font">
+    
+          <div class="h-full bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
+
+            <h3 class="tracking-widest title-font sm:text-2xl text-xl font-black text-gray-900 mb-1">Gana hasta $160,000 Pesos</h3>
+            <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">Gana! Una Ranger XLT Doble Cabina</h1>
+
+            <div class="w-full max-w-lg p-4 mx-auto bg-white rounded-2xl shadow-xl flex flex-col">
+
+              <div class="flex justify-between font-semibold text-sm pb-2 pb-2">
+
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">01</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">02</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">03</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">04</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">05</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">06</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">07</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">08</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">09</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">10</button>
+
+              </div>
+
+              <div class="flex justify-between font-semibold text-sm pb-2">
+
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">11</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">12</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">13</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">14</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">15</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">16</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">17</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">18</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">19</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">20</button>
+              </div>
+
+              <div class="flex justify-between font-semibold text-sm pb-2">
+
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">21</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">22</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">23</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">24</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">25</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">26</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">27</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">28</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">29</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">30</button>
+              </div>
+
+              <div class="flex justify-between font-semibold text-sm pb-2">
+
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">31</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">32</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">33</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">34</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">35</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">36</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">37</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">38</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">39</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">40</button>
+              </div>
+
+              <div class="flex justify-between font-semibold text-sm pb-2">
+
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">41</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">42</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">43</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">44</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">45</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">46</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">47</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">48</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">49</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">50</button>
+              </div>
+
+              <div class="flex justify-between font-semibold text-sm pb-2">
+
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">51</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">52</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">53</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">54</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">55</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">56</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">57</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">58</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">59</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">60</button>
+              </div>
+
+               
+
+              <div class="flex justify-between font-semibold text-sm pb-2">
+
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">61</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">62</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">63</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">64</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">65</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">66</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">67</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">68</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">69</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">70</button>
+              </div>
+
+              <div class="flex justify-between font-semibold text-sm pb-2">
+
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">71</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">72</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">73</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">74</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">75</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">76</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">77</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">78</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">79</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">80</button>
+              </div>
+
+              <div class="flex justify-between font-semibold text-sm pb-2">
+
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">81</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">82</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">83</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">84</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">85</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">86</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">87</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">88</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">89</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">90</button>
+              </div>
+
+              <div class="flex justify-between font-semibold text-sm pb-2">
+
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">91</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">92</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">93</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">94</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">95</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">96</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">97</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">98</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">99</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded">00</button>
+              </div>
+              <div class="flex justify-between font-medium uppercase text-xs pt-4 pb-2 border-t"> 
+                <span class="px-3 border rounded-sm w-14 h-5 flex items-center justify-center border-red-500 text-red-500 shadow-md">Mitad</span>
+                <span class="px-3 border rounded-sm w-14 h-5 flex items-center justify-center border-black text-black-500 shadow-md">DISPONIBLE</span>
+                <span class="px-3 border rounded-sm w-14 h-5 flex items-center justify-center border-green-500 text-green-500 shadow-md">Vendido</span>
+                
+         </div>
+
+
+
+         <div class="container mx-auto py-8">
+          <form class="max-w-md mx-auto" id="formulario">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="mb-4">
+                <label for="nombre" class="block text-gray-700 text-sm font-bold mb-2">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500" placeholder="Ingrese su nombre" required>
+              </div>
+              <div class="mb-4">
+                <label for="apellidos" class="block text-gray-700 text-sm font-bold mb-2">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500" placeholder="Ingrese sus apellidos" required>
+              </div>
+              <div class="mb-4">
+                <label for="whatsapp" class="block text-gray-700 text-sm font-bold mb-2">Whatsapp:</label>
+                <input type="text" id="whatsapp" name="whatsapp" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500" placeholder="Ingrese su número de Whatsapp" required>
+              </div>
+              <div class="mb-4">
+                <label for="estado" class="block text-gray-700 text-sm font-bold mb-2">Estado:</label>
+                <select id="estado" name="estado" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500" required>
+                  <option value="" disabled selected>Seleccione su estado</option>
+                  <option value="Aguascalientes">Aguascalientes</option>
+                  <option value="Aguascalientes">Aguascalientes</option>
+                  <option value="Baja California">Baja California</option>
+                  <option value="Baja California Sur">Baja California Sur</option>
+                  <option value="Campeche">Campeche</option>
+                  <option value="Chiapas">Chiapas</option>
+                  <option value="Chihuahua">Chihuahua</option>
+                  <option value="Ciudad de México">Ciudad de México</option>
+                  <option value="Coahuila">Coahuila</option>
+                  <option value="Colima">Colima</option>
+                  <option value="Durango">Durango</option>
+                  <option value="Estado de México">Estado de México</option>
+                  <option value="Guanajuato">Guanajuato</option>
+                  <option value="Guerrero">Guerrero</option>
+                  <option value="Hidalgo">Hidalgo</option>
+                  <option value="Jalisco">Jalisco</option>
+                  <option value="Michoacán">Michoacán</option>
+                  <option value="Morelos">Morelos</option>
+                  <option value="Nayarit">Nayarit</option>
+                  <option value="Nuevo León">Nuevo León</option>
+                  <option value="Oaxaca">Oaxaca</option>
+                  <option value="Puebla">Puebla</option>
+                  <option value="Querétaro">Querétaro</option>
+                  <option value="Quintana Roo">Quintana Roo</option>
+                  <option value="San Luis Potosí">San Luis Potosí</option>
+                  <option value="Sinaloa">Sinaloa</option>
+                  <option value="Sonora">Sonora</option>
+                  <option value="Tabasco">Tabasco</option>
+                  <option value="Tamaulipas">Tamaulipas</option>
+                  <option value="Tlaxcala">Tlaxcala</option>
+                  <option value="Veracruz">Veracruz</option>
+                  <option value="Yucatán">Yucatán</option>
+                  <option value="Zacatecas">Zacatecas</option>
+                  <!-- Agrega más opciones de estados aquí -->
+                </select>
+              </div>
+            </div>
+            <div class="text-center mt-4">
+              <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">Enviar</button>
+            </div>
+          </form>
         </div>
-        <div class="mb-4">
-          <label for="apellidos" class="block text-gray-700 text-sm font-bold mb-2">Apellidos:</label>
-          <input type="text" id="apellidos" name="apellidos" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500" placeholder="Ingrese sus apellidos" required>
-        </div>
-        <div class="mb-4">
-          <label for="whatsapp" class="block text-gray-700 text-sm font-bold mb-2">Whatsapp:</label>
-          <input type="text" id="whatsapp" name="whatsapp" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500" placeholder="Ingrese su número de Whatsapp" required>
-        </div>
-        <div class="mb-4">
-          <label for="estado" class="block text-gray-700 text-sm font-bold mb-2">Estado:</label>
-          <select id="estado" name="estado" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500" required>
-            <option value="" disabled selected>Seleccione su estado</option>
-            <option value="Aguascalientes">Aguascalientes</option>
-            <option value="Aguascalientes">Aguascalientes</option>
-            <option value="Baja California">Baja California</option>
-            <option value="Baja California Sur">Baja California Sur</option>
-            <option value="Campeche">Campeche</option>
-            <option value="Chiapas">Chiapas</option>
-            <option value="Chihuahua">Chihuahua</option>
-            <option value="Ciudad de México">Ciudad de México</option>
-            <option value="Coahuila">Coahuila</option>
-            <option value="Colima">Colima</option>
-            <option value="Durango">Durango</option>
-            <option value="Estado de México">Estado de México</option>
-            <option value="Guanajuato">Guanajuato</option>
-            <option value="Guerrero">Guerrero</option>
-            <option value="Hidalgo">Hidalgo</option>
-            <option value="Jalisco">Jalisco</option>
-            <option value="Michoacán">Michoacán</option>
-            <option value="Morelos">Morelos</option>
-            <option value="Nayarit">Nayarit</option>
-            <option value="Nuevo León">Nuevo León</option>
-            <option value="Oaxaca">Oaxaca</option>
-            <option value="Puebla">Puebla</option>
-            <option value="Querétaro">Querétaro</option>
-            <option value="Quintana Roo">Quintana Roo</option>
-            <option value="San Luis Potosí">San Luis Potosí</option>
-            <option value="Sinaloa">Sinaloa</option>
-            <option value="Sonora">Sonora</option>
-            <option value="Tabasco">Tabasco</option>
-            <option value="Tamaulipas">Tamaulipas</option>
-            <option value="Tlaxcala">Tlaxcala</option>
-            <option value="Veracruz">Veracruz</option>
-            <option value="Yucatán">Yucatán</option>
-            <option value="Zacatecas">Zacatecas</option>
-            <!-- Agrega más opciones de estados aquí -->
-          </select>
-        </div>
-      </div>
-      <div class="text-center mt-4">
-        <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">Enviar</button>
-      </div>
-    </form>
-  </div>
+      
+          
+    </div>
+
+
+
+  <footer class="text-gray-600 body-font">
+    <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+      <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg>
+        <span class="ml-3 text-xl font-Black">KrloZilva Lottery</span>
+      </a>
+      <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2023 KrloZilva Loterry —
+        <a href="https://www.facebook.com/krlozilva" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">@krlozilva</a>
+      </p>
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+        <a class="text-gray-500">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+            <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+          </svg>
+        </a>
+      </span>
+    </div>
+  </footer>
 
 </body>
-
 </html>
 
 

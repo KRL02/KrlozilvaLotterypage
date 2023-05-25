@@ -22,7 +22,7 @@
           var estado = document.getElementById("estado").value;
   
           // Construir el mensaje para enviar por WhatsApp
-          var mensaje = "¡Hola! Mi nombre es " + nombre + " " + apellidos + ". Estoy interesado/a y mi estado es " + estado + ".";
+          var mensaje = "¡Hola! Mi nombre es " + nombre + " " + apellidos + ". Estoy interesado/a y mi estado es " + estado + "." + "Números seleccionados: " + numerosSeleccionados;
   
           // Enviar mensaje por WhatsApp
           var link = "https://api.whatsapp.com/send?phone=" + 523531202623 + "&text=" + encodeURIComponent(mensaje);

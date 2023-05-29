@@ -13,8 +13,13 @@
     <script>
 
           function toggleSeleccion(numero) {
+
         const btn = document.getElementById("btn" + numero);
         const label = document.getElementById("numerosSeleccionados");
+        const label2 = document.getElementById("totalSeleccionados");
+        const costo = 2000 
+        var total = 0
+        var suma = 0
 
         btn.classList.toggle("bg-green-500");
 
@@ -24,11 +29,21 @@
 
         // Construir la lista de números seleccionados
         for (let i = 0; i < botonesSeleccionados.length; i++) {
-          numerosSeleccionados += botonesSeleccionados[i].textContent + ", ";
+          numerosSeleccionados += botonesSeleccionados[i].textContent + ",";
+          //total de numeros 
+          total++
         }
 
-        // Actualizar el contenido del label
-        label.textContent = "Números seleccionados: " + numerosSeleccionados;
+        //Sumar Total de Numeros
+        totalSeleccionados=costo*total
+        
+        // Actualizar el contenido numerosSeleccionados
+        label.textContent =total + " Numeros Seleccionados: " + numerosSeleccionados;
+
+        // Actualizar el contenido del totalSelecionado 
+        label2.textContent = "Total: $" + totalSeleccionados + " mxn";
+        
+
         }
       
       document.addEventListener("DOMContentLoaded", function() {
@@ -42,7 +57,7 @@
           var estado = document.getElementById("estado").value;
   
           // Construir el mensaje para enviar por WhatsApp
-          var mensaje = "¡Hola! Mi nombre es " + nombre + " " + apellidos + ". Estoy interesado/a y mi estado es " + estado + "." + "Números seleccionados: ";
+          var mensaje = "¡Hola! Mi nombre es " + nombre + " " + apellidos +"Soy del " + estado + ". Favor de Anotarme estos Numeros " + numerosSeleccionados + " Para la rifa del Biletazo";
   
           // Enviar mensaje por WhatsApp
           var link = "https://api.whatsapp.com/send?phone=" + 523531202623 + "&text=" + encodeURIComponent(mensaje);
@@ -84,8 +99,9 @@
     
           <div class="h-full bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
 
-            <h3 class="tracking-widest title-font sm:text-2xl text-xl font-black text-gray-900 mb-1">Ganate Un Billetazo!</h3>
-            <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">Hasta $160,000 Pesos en Efectivo!</h1>
+            <h3 class="hover:text-green-500 tracking-widest title-font sm:text-2xl text-xl font-black text-gray-900 mb-1">Ganate Un Billetazo!</h3>
+            <h1 class="hover:text-green-500 title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">Hasta $160,000 Pesos en Efectivo!</h1>
+            <a class="hover:text-green-500">Costo: $2,000 mxn</a>
 
             <div class="w-full max-w-lg p-4 mx-auto bg-white rounded-2xl shadow-xl flex flex-col">
 
@@ -229,29 +245,31 @@
                  <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded" onclick="toggleSeleccion(97)" id="btn97" class="btn">97</button>
                  <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded" onclick="toggleSeleccion(98)" id="btn98" class="btn">98</button>
                  <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded" onclick="toggleSeleccion(99)" id="btn99" class="btn">99</button>
-                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded" onclick="toggleSeleccion(00)" id="btn00" class="btn">00</button>
+                 <button class="bg-transparent hover:bg-green-500 text-black-700 font-semibold hover:text-white py-1 px-1 border border-black hover:border-transparent rounded" onclick="toggleSeleccion(100)" id="btn100" class="btn">00</button>
               </div>
-              <div class="flex justify-between font-medium uppercase text-xs pt-4 pb-2 border-t"> 
+
+              <div class="flex justify-between font-medium uppercase text-xs pt-6 pb-2 border-t"> 
                 <span class="px-3 border rounded-sm w-14 h-5 flex items-center justify-center border-red-500 text-red-500 shadow-md">Mitad</span>
                 <span class="px-3 border rounded-sm w-14 h-5 flex items-center justify-center border-black text-black-500 shadow-md">DISPONIBLE</span>
                 <span class="px-3 border rounded-sm w-14 h-5 flex items-center justify-center border-green-500 text-green-500 shadow-md">Vendido</span>
                 
-              
-
-               
          </div>
+         
 
-         <label id="numerosSeleccionados" class="text-green-500"></label>
-
-
+         <div class="grid grid-cols-1 md:grid-cols-1 py-6">
+           <label id="numerosSeleccionados" class="text-2xl font-semibold  text-green-500"></label>
+           <label id="totalSeleccionados" class="text-2xl font-semibold  text-black-500"></label>
+         </div>
+      
+         
 
          <div class="container mx-auto py-8">
           <form class="max-w-md mx-auto" id="formulario">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="grid grid-cols-1 md:grid-cols-1 gap-6">
 
-              <h2 class="text-2xl font-semibold mb-6">Formulario de Contacto</h2>
+              <h2 class="text-2xl font-semibold mb-8">Datos del Participante!</h2>
 
-              <div class="mb-4">
+              <div class="mb-">
                 <label for="nombre" class="block text-gray-700 text-sm font-bold mb-2">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500" placeholder="Ingrese su nombre" required>
               </div>
@@ -263,7 +281,7 @@
 
               <div class="mb-4">
                 <label for="whatsapp" class="block text-gray-700 text-sm font-bold mb-2">Whatsapp:</label>
-                <input type="text" id="whatsapp" name="whatsapp" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500" placeholder="Ingrese su número de Whatsapp" required>
+                <input type="text" id="whatsapp" name="whatsapp" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500" placeholder="(123) 456-7890" required>
               </div>
               
               <div class="mb-4">
@@ -316,6 +334,7 @@
         </div>
 
     </div>
+
 
     
 

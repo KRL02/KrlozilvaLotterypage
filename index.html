@@ -26,7 +26,7 @@
         // Obtener los botones seleccionados
         const botonesSeleccionados = document.getElementsByClassName("bg-green-500");
         let numerosSeleccionados = "";
-        let numeroswhatsapp = numerosSeleccionados
+        var numeroswhatsapp = numerosSeleccionados
 
         // Construir la lista de números seleccionados
         for (let i = 0; i < botonesSeleccionados.length; i++) {
@@ -58,7 +58,7 @@
           var estado = document.getElementById("estado").value;
   
           // Construir el mensaje para enviar por WhatsApp
-          var mensaje = "¡Hola! Mi nombre es " + nombre + " " + apellidos +" Soy del " + estado + ". Favor de Anotarme estos Numeros " + " Para la rifa del Biletazo!!";
+          var mensaje = "¡Hola! Mi nombre es " + nombre + " " + apellidos +" Soy del " + estado + ". Favor de Anotarme estos Numeros " + " Para la rifa del Biletazo!!" + total;
   
           // Enviar mensaje por WhatsApp
           var link = "https://api.whatsapp.com/send?phone=" + 523531202623 + "&text=" + encodeURIComponent(mensaje);

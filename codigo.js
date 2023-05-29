@@ -36,7 +36,7 @@
         }
 
 
-
+         <script src="https://cdn.jsdelivr.net/npm/whatsapp-web.js"></script>  
          document.addEventListener("DOMContentLoaded",function() {
          document.getElementById("formulario").addEventListener("submit", function(event) {
          event.preventDefault(); // Evitar que el formulario se envíe automáticamente

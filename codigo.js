@@ -56,7 +56,7 @@
 
 
          // Enviar mensaje por WhatsApp
-         var link = "https://api.whatsapp.com/send?phone=" + 523531202623 + "&text=" + mensaje;
+         var link = "https://api.whatsapp.com/send?phone=" + 523531202623 + "&text=" + encodeURIComponent(mensaje);
          window.open(link, "_blank");
          });
 

@@ -49,9 +49,9 @@
          const estado = document.getElementById("estado").value;
  
          // Construir el mensaje para enviar por WhatsApp
-         const mensaje = `Nombre: ${nombre}%0A ` +
-                         `Apellidos: ${apellidos}%0A ` +
-                         `Whatsapp: ${whatsapp}%0A ` +
+         const mensaje = `Nombre: ${nombre}%20 ` +
+                         `Apellidos: ${apellidos}%20 ` +
+                         `Whatsapp: ${whatsapp}%20 ` +
                          `Estado: ${estado}`;
 
 

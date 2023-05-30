@@ -48,14 +48,15 @@
          const estado = document.getElementById("estado").value;
  
          // Construir el mensaje para enviar por WhatsApp
-         const mensaje ="Nombre: ${nombre}%OA" +
-                        "Apellidos: ${apellidos}%OA" +
-                        "Celular: ${celular}%OA" +
-                        "Estado: ${estado}";
+         const mensaje = `Nombre: ${nombre}%0A` +
+                         `Apellidos: ${apellidos}%0A` +
+                         `Celular: ${celular}%0A` +
+                         `Estado: ${estado}`;
 
 
          // Enviar mensaje por WhatsApp
-         var link = "https://api.whatsapp.com/send?phone=" + 523531202623 + "&text=" + encodeURIComponent(mensaje);
+         const phoneNumber = "523531202623"; //numero de telefono como cadena
+         const link = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(mensaje)}`;
          window.open(link, "_blank");
          });
 

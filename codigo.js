@@ -42,14 +42,19 @@
          event.preventDefault(); // Evitar que el formulario se envíe automáticamente
  
          // Obtener los valores de los campos
-         var nombre = document.getElementById("nombre").value;
-         var apellidos = document.getElementById("apellidos").value;
-         var whatsapp = document.getElementById("whatsapp").value;
-         var estado = document.getElementById("estado").value;
+         const nombre = document.getElementById("nombre").value;
+         const apellidos = document.getElementById("apellidos").value;
+         const celular = document.getElementById("whatsapp").value;
+         const estado = document.getElementById("estado").value;
+         const numSel = document.getElementById(numSel).value;
  
          // Construir el mensaje para enviar por WhatsApp
-         var mensaje = "¡Hola! Mi nombre es " + nombre + " " + apellidos +" Soy del " + estado + ". Favor de Anotarme estos Numeros " + " Para la rifa del Biletazo!!";
- 
+         const mensaje ='Nombre: ${nombre}%OA'+
+                        'Apellidos: ${apellidos}%OA' +
+                        'Celular: ${whatsapp}%OA' +
+                        'Estado: ${estado}';
+
+
          // Enviar mensaje por WhatsApp
          var link = "https://api.whatsapp.com/send?phone=" + 523531202623 + "&text=" + encodeURIComponent(mensaje);
          window.open(link, "_blank");

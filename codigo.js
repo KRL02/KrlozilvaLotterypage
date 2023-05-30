@@ -44,15 +44,15 @@
          // Obtener los valores de los campos
          const nombre = document.getElementById("nombre").value;
          const apellidos = document.getElementById("apellidos").value;
-         const celular = document.getElementById("whatsapp").value;
+         const celular = document.getElementById("celular").value;
          const estado = document.getElementById("estado").value;
          const numSel = document.getElementById(numSel).value;
  
          // Construir el mensaje para enviar por WhatsApp
-         const mensaje ='Nombre: ${nombre}%OA'+
-                        'Apellidos: ${apellidos}%OA' +
-                        'Celular: ${whatsapp}%OA' +
-                        'Estado: ${estado}';
+         const mensaje ="Nombre: ${nombre}%OA" +
+                        "Apellidos: ${apellidos}%OA" +
+                        "Celular: ${celular}%OA" +
+                        "Estado: ${estado}";
 
 
          // Enviar mensaje por WhatsApp

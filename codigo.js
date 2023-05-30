@@ -46,7 +46,6 @@
          const apellidos = document.getElementById("apellidos").value;
          const celular = document.getElementById("celular").value;
          const estado = document.getElementById("estado").value;
-         const numSel = document.getElementById(numSel).value;
  
          // Construir el mensaje para enviar por WhatsApp
          const mensaje ="Nombre: ${nombre}%OA" +

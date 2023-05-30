@@ -29,14 +29,14 @@
         totalSeleccionados=costo*total
         
         // Actualizar el contenido numerosSeleccionados
-        label.textContent =total + " Numeros Seleccionados: " + numerosSeleccionados;
+        label.textContent = total + " Numeros Seleccionados: "+ numerosSeleccionados;
  
         // Actualizar el contenido del totalSelecionado 
         label2.textContent = "Total: $" + totalSeleccionados + " mxn";
         }
 
 
-         <script src="https://cdn.jsdelivr.net/npm/whatsapp-web.js"></script>  
+        
          document.addEventListener("DOMContentLoaded",function() {
          document.getElementById("formulario").addEventListener("submit", function(event) {
          event.preventDefault(); // Evitar que el formulario se envíe automáticamente

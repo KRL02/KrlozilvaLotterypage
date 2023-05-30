@@ -33,6 +33,7 @@
  
         // Actualizar el contenido del totalSelecionado 
         label2.textContent = "Total: $" + totalSeleccionados + " mxn";
+        
         }
 
 
@@ -44,18 +45,18 @@
          // Obtener los valores de los campos
          const nombre = document.getElementById("nombre").value;
          const apellidos = document.getElementById("apellidos").value;
-         const celular = document.getElementById("celular").value;
+         const whatsapp = document.getElementById("whatsapp").value;
          const estado = document.getElementById("estado").value;
  
          // Construir el mensaje para enviar por WhatsApp
          const mensaje = `Nombre: ${nombre}%0A` +
                          `Apellidos: ${apellidos}%0A` +
-                         `Celular: ${celular}%0A` +
+                         `Whatsapp: ${whatsapp}%0A` +
                          `Estado: ${estado}`;
 
 
          // Enviar mensaje por WhatsApp
-         const phoneNumber = "523531202623"; //numero de telefono como cadena
+         const phoneNumber = "+523531202623"; //numero de telefono como cadena
          const link = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(mensaje)}`;
          window.open(link, "_blank");
          });

@@ -7,14 +7,22 @@
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="codigo.js"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/whatsapp-web.js"></script>  
     <title>krlozilva Lottery</title>
+
+    <style>
+      .floating-button {
+        bottom: 4rem;
+        right: 4rem;
+      }
+    </style>
 </head>
 
 
 <body>
 
-  
+
   <header class="text-yelow-600 body-font">
     <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
       <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
@@ -29,11 +37,11 @@
         <a class="mr-5 hover:text-gray-900">Reglas</a>
         <a class="mr-5 hover:text-gray-900">Ganadores</a>
       </nav>
-      <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Button
+      <a href="https://wa.me/+523531202623" class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-green-400 hover:text-white rounded text-base mt-4 md:mt-0">Whatsapp
         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
           <path d="M5 12h14M12 5l7 7-7 7"></path>
         </svg>
-      </button>
+      </a>
     </div>
   </header>
 
@@ -225,18 +233,18 @@
 
 
               <div class="mb-3">
-                <label for="nombre" class="text-sm text-navy-700 dark:text-white font-bold">Nombre:</label>
+                <label for="nombre" class="text-sm text-navy-700 dark:text-white font-bold"></label>
                 <input type="text" id="nombre" placeholder="Nombre" class="mt-2 flex h-12 w-full items-center justify-center rounded-xl border bg-white/0 p-3 text-sm outline-none border-gray-200">
               </div>
 
               <div class="mb-3">
-                <label for="apellidos" class="text-sm text-navy-700 dark:text-white font-bold">Apellidos:</label>
+                <label for="apellidos" class="text-sm text-navy-700 dark:text-white font-bold"></label>
                 <input type="text" id="apellidos" placeholder="Apellidos" class="mt-2 flex h-12 w-full items-center justify-center rounded-xl border bg-white/0 p-3 text-sm outline-none border-gray-200">
               </div>
               
 
               <div class="mb-3">
-                <label for="whatsapp" class="text-sm text-navy-700 dark:text-white font-bold">Whatsapp:</label>
+                <label for="whatsapp" class="text-sm text-navy-700 dark:text-white font-bold"></label>
                 <input type="text" id="whatsapp" name="whatsapp" class="mt-2 flex h-12 w-full items-center justify-center rounded-xl border bg-white/0 p-3 text-sm outline-none border-green-500 text-green-500 placeholder:text-green-500 dark:!border-green-400 dark:!text-green-400 dark:placeholder:!text-green-400" placeholder="(123) 456-7890" required>
               </div>
 
